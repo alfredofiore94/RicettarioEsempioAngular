@@ -3,7 +3,10 @@
         <app-lista-spesa-modifica></app-lista-spesa-modifica>
     </div>
     <ul class="list-group">
-        <a href="" class="list-group-item" style="cursor: pointer"></a>
+        <a href="" class="list-group-item" style="cursor: pointer"
+        *ngFor="let a of listaIngredienti">
+        {{a.nome}} ({{a.quantita}})
+        </a>
     </ul>
 
 </div>

@@ -8,7 +8,7 @@ import { Ingrediente } from './ingrediente.model';
 })
 export class ListaSpesaComponent implements OnInit {
 
-  ingredienti: Ingrediente[] = []
+  listaIngredienti: Ingrediente[] = []
   constructor() { }
 
   ngOnInit(): void {

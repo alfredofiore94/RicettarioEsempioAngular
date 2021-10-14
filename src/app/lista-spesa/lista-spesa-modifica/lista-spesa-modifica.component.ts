@@ -12,4 +12,17 @@ export class ListaSpesaModificaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clear(){
+    // funzione che svuota i campi
+    
+  }
+
+  addProdotto(){
+    // inserte nuovo prodotto
+  
+  }
+
+  deleteProdotto(){
+    // elimina un prodotto inserito
+  }
 }

@@ -1,1 +1,29 @@
-<p>lista-spesa-modifica works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <form>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" class="form-control" />
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="quantita">Quantità</label>
+          <input type="text" id="quantita" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5">
+          <div class="col-md-4">
+            <button class="btn btn-success" (click)="addProdotto()">Aggiungi</button>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-danger" (click)="deleteProdotto()">Rimuovi</button>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-primary" (click)="clear()">Svuota campi</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
