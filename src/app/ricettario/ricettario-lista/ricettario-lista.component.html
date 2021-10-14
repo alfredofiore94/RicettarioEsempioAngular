@@ -1,1 +1,25 @@
-<p>ricettario-lista works!</p>
+<div class="row">
+    <div class="col-sx-12">
+        <div class="btn btn-success">Nuova Ricetta</div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sx-12">
+        <a href="#" class="list-group-item clearfix"
+        *ngFor="let ricetta of ricette">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">
+                    {{ricetta.nome}}               
+                </h4>
+                <p class="list-group-item-text"> {{ricetta.descrizione}}</p>
+            </div>
+            <span class="pull-right">
+                <img src="" alt="" class="img-responsive" style="max-height: 50px"
+                [src]="ricetta.pathImg">
+            </span>
+        </a>
+        <app-ricettario-item></app-ricettario-item>
+    </div>
+
+</div>
