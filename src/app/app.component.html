@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (pagSelAction)="vaiAllaSelezione($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-ricettario></app-ricettario>
-      <app-lista-spesa></app-lista-spesa>
+      <app-ricettario *ngIf="ricettarioFlag"></app-ricettario>
+      <app-lista-spesa *ngIf="listaSpesaFlag"></app-lista-spesa>
     </div>
   </div>
 </div>
