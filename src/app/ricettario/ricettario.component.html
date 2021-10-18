@@ -1,9 +1,15 @@
 <div class="row">
     <div class="col-md-4">
-        <app-ricettario-lista></app-ricettario-lista>
+        <app-ricettario-lista (ricettaSelezionata)="ricettaSelezionata = $event; testPrint($event)"></app-ricettario-lista>
+        <!-- Associamo direttamente $event che per il nostro evento 'ricettaSelezionata' sappiamo
+             contenere una ricetta  -->
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-7">
-        <app-ricettario-dettaglio></app-ricettario-dettaglio>
+        <app-ricettario-dettaglio *ngIf="ricettaSelezionata; else noSelezionata"
+            [ricettaSelezionataDt]="ricettaSelezionata"></app-ricettario-dettaglio>
+        <ng-template #noSelezionata>
+            <p>Selezionare una ricetta</p>
+        </ng-template>
     </div>
 </div>

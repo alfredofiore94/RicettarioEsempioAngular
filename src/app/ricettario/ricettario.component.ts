@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ricetta } from './ricetta.model';
 
 @Component({
   selector: 'app-ricettario',
@@ -9,7 +10,13 @@ export class RicettarioComponent implements OnInit {
 
   constructor() { }
 
+  ricettaSelezionata: Ricetta;
+
   ngOnInit(): void {
+  }
+
+  testPrint(ric: Ricetta): void {
+    console.log(ric);
   }
 
 }
